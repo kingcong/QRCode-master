@@ -172,6 +172,11 @@
     // 只能设置让二维码只有出现在某一块区域才去扫描
 //    self.output.rectOfInterest = CGRectMake(0.0, 0.0, 1, 1);
     
+    // 设置二维码区域参开http://www.tuicool.com/articles/6jUjmur
+    CGFloat ScreenHigh = [UIScreen mainScreen].bounds.size.height;
+    CGFloat ScreenWidth = [UIScreen mainScreen].bounds.size.width;
+    [self.output setRectOfInterest : CGRectMake (( 160 )/ ScreenHigh ,(( ScreenWidth - 300 )/ 2 )/ ScreenWidth , 300 / ScreenHigh , 300 / ScreenWidth)];
+    
     // 5.添加预览图层
     [self.view.layer insertSublayer:self.previewLayer atIndex:0];
     
