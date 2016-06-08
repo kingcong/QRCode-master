@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7317F8EC1D07FE150055C569 /* QRCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7317F8EB1D07FE150055C569 /* QRCodeViewController.xib */; };
 		7344E3531CF16F7500BBBE7A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7344E3521CF16F7500BBBE7A /* main.m */; };
 		7344E3561CF16F7500BBBE7A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7344E3551CF16F7500BBBE7A /* AppDelegate.m */; };
 		7344E3591CF16F7500BBBE7A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7344E3581CF16F7500BBBE7A /* ViewController.m */; };
@@ -16,7 +17,6 @@
 		7344E36C1CF16F7500BBBE7A /* QRCodeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7344E36B1CF16F7500BBBE7A /* QRCodeTests.m */; };
 		7344E3771CF16F7500BBBE7A /* QRCodeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7344E3761CF16F7500BBBE7A /* QRCodeUITests.m */; };
 		736F5AD91D056DD2002212B1 /* QRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 736F5AD71D056DD2002212B1 /* QRCodeViewController.m */; };
-		736F5ADA1D056DD2002212B1 /* QRCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 736F5AD81D056DD2002212B1 /* QRCodeViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7317F8EB1D07FE150055C569 /* QRCodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QRCodeViewController.xib; sourceTree = "<group>"; };
 		7344E34E1CF16F7500BBBE7A /* QRCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QRCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7344E3521CF16F7500BBBE7A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7344E3541CF16F7500BBBE7A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -55,7 +56,6 @@
 		7344E3781CF16F7500BBBE7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		736F5AD61D056DD2002212B1 /* QRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeViewController.h; sourceTree = "<group>"; };
 		736F5AD71D056DD2002212B1 /* QRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeViewController.m; sourceTree = "<group>"; };
-		736F5AD81D056DD2002212B1 /* QRCodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QRCodeViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,7 +151,7 @@
 			children = (
 				736F5AD61D056DD2002212B1 /* QRCodeViewController.h */,
 				736F5AD71D056DD2002212B1 /* QRCodeViewController.m */,
-				736F5AD81D056DD2002212B1 /* QRCodeViewController.xib */,
+				7317F8EB1D07FE150055C569 /* QRCodeViewController.xib */,
 			);
 			path = Lib;
 			sourceTree = "<group>";
@@ -262,7 +262,7 @@
 			files = (
 				7344E3611CF16F7500BBBE7A /* LaunchScreen.storyboard in Resources */,
 				7344E35E1CF16F7500BBBE7A /* Assets.xcassets in Resources */,
-				736F5ADA1D056DD2002212B1 /* QRCodeViewController.xib in Resources */,
+				7317F8EC1D07FE150055C569 /* QRCodeViewController.xib in Resources */,
 				7344E35C1CF16F7500BBBE7A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

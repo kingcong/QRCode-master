@@ -64,8 +64,24 @@
                         </mask>
                     </variation>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zkx-VD-MTH">
-                    <rect key="frame" x="279" y="109" width="42" height="21"/>
+                <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PhD-9T-6M3">
+                    <rect key="frame" x="0.0" y="0.0" width="150" height="551"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZKI-bB-aTc">
+                    <rect key="frame" x="150" y="450" width="300" height="101"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fss-PE-k6m">
+                    <rect key="frame" x="450" y="0.0" width="150" height="551"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gAf-Nj-aXv">
+                    <rect key="frame" x="150" y="0.0" width="300" height="150"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请将二维码放在上面框中" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zkx-VD-MTH">
+                    <rect key="frame" x="207" y="470" width="187" height="21"/>
                     <color key="backgroundColor" red="0.93333333330000001" green="0.47949721249999999" blue="0.85304837489999996" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -75,12 +91,28 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="xbI-0m-VUG" firstAttribute="leading" secondItem="goN-Ew-frY" secondAttribute="leading" id="3jV-2v-0uM"/>
+                <constraint firstItem="PhD-9T-6M3" firstAttribute="leading" secondItem="goN-Ew-frY" secondAttribute="leading" id="406-g2-thR"/>
                 <constraint firstItem="Nnp-tK-sc1" firstAttribute="centerX" secondItem="goN-Ew-frY" secondAttribute="centerX" id="61W-NR-KdY"/>
+                <constraint firstItem="Nnp-tK-sc1" firstAttribute="top" secondItem="gAf-Nj-aXv" secondAttribute="bottom" id="6hc-fK-cfz"/>
+                <constraint firstItem="fss-PE-k6m" firstAttribute="leading" secondItem="ZKI-bB-aTc" secondAttribute="trailing" id="KAE-gA-IGc"/>
+                <constraint firstItem="gAf-Nj-aXv" firstAttribute="leading" secondItem="PhD-9T-6M3" secondAttribute="trailing" id="NzD-gs-mp0"/>
+                <constraint firstItem="fss-PE-k6m" firstAttribute="leading" secondItem="Nnp-tK-sc1" secondAttribute="trailing" id="VCm-wh-a0p"/>
+                <constraint firstItem="xbI-0m-VUG" firstAttribute="top" secondItem="fss-PE-k6m" secondAttribute="bottom" id="WZA-f1-eUl"/>
                 <constraint firstItem="Nnp-tK-sc1" firstAttribute="centerY" secondItem="goN-Ew-frY" secondAttribute="centerY" id="Yrl-pb-A7Q"/>
                 <constraint firstAttribute="trailing" secondItem="xbI-0m-VUG" secondAttribute="trailing" id="ZNZ-wr-CxC"/>
-                <constraint firstItem="Nnp-tK-sc1" firstAttribute="top" secondItem="Zkx-VD-MTH" secondAttribute="bottom" constant="20" id="ZO4-VT-MQP"/>
+                <constraint firstItem="Zkx-VD-MTH" firstAttribute="top" secondItem="Nnp-tK-sc1" secondAttribute="bottom" constant="20" id="a21-3O-mN1"/>
+                <constraint firstItem="fss-PE-k6m" firstAttribute="leading" secondItem="gAf-Nj-aXv" secondAttribute="trailing" id="arI-C3-MKK"/>
+                <constraint firstItem="xbI-0m-VUG" firstAttribute="top" secondItem="PhD-9T-6M3" secondAttribute="bottom" id="auc-jJ-wp2"/>
+                <constraint firstAttribute="trailing" secondItem="fss-PE-k6m" secondAttribute="trailing" id="b6h-xj-wA6"/>
                 <constraint firstAttribute="bottom" secondItem="xbI-0m-VUG" secondAttribute="bottom" id="bhN-Of-mad"/>
-                <constraint firstItem="Zkx-VD-MTH" firstAttribute="centerX" secondItem="goN-Ew-frY" secondAttribute="centerX" id="yUX-D6-hpM"/>
+                <constraint firstItem="Zkx-VD-MTH" firstAttribute="centerX" secondItem="goN-Ew-frY" secondAttribute="centerX" id="e72-De-KKs"/>
+                <constraint firstItem="ZKI-bB-aTc" firstAttribute="top" secondItem="Nnp-tK-sc1" secondAttribute="bottom" id="fTv-sK-9bi"/>
+                <constraint firstItem="Nnp-tK-sc1" firstAttribute="leading" secondItem="PhD-9T-6M3" secondAttribute="trailing" id="hM0-Xh-ChS"/>
+                <constraint firstItem="PhD-9T-6M3" firstAttribute="top" secondItem="goN-Ew-frY" secondAttribute="top" id="hVO-i3-I6u"/>
+                <constraint firstItem="ZKI-bB-aTc" firstAttribute="leading" secondItem="PhD-9T-6M3" secondAttribute="trailing" id="izy-dQ-Mcn"/>
+                <constraint firstItem="fss-PE-k6m" firstAttribute="top" secondItem="goN-Ew-frY" secondAttribute="top" id="jmq-Ue-ufl"/>
+                <constraint firstItem="gAf-Nj-aXv" firstAttribute="top" secondItem="goN-Ew-frY" secondAttribute="top" id="laE-Tu-GqI"/>
+                <constraint firstItem="xbI-0m-VUG" firstAttribute="top" secondItem="ZKI-bB-aTc" secondAttribute="bottom" id="zDQ-1d-jw1"/>
             </constraints>
         </view>
     </objects>
