@@ -257,7 +257,7 @@
             [self stopScan];
             
             if (_completionBlock) {
-                [_beepPlayer play];
+                [self.beepPlayer play];
                 _completionBlock(result);
             }
             
