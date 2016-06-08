@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "QRCodeViewController.h"
 
-@interface ViewController ()
+@interface ViewController () <QRCodeViewControllerDelegate>
 
 @end
 
@@ -24,9 +24,28 @@
     
     QRCodeViewController *qrVc = [[QRCodeViewController alloc] init];
     qrVc.view.backgroundColor = [UIColor clearColor];
+    qrVc.delegate = self;
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:qrVc];
     
+    // 设置扫描完成后的回调
+    __weak typeof (self) wSelf = self;
+    [qrVc setCompletionWithBlock:^(NSString *resultAsString) {
+        [wSelf.navigationController popViewControllerAnimated:YES];
+        [[[UIAlertView alloc] initWithTitle:@"" message:resultAsString delegate:self cancelButtonTitle:@"好的" otherButtonTitles: nil] show];
+    }];
+    
     [self presentViewController:nav animated:YES completion:nil];
+}
+
+#pragma mark - 代理方法
+
+- (void)reader:(QRCodeViewController *)reader didScanResult:(NSString *)result
+{
+    NSLog(@"%@",result);
+    [self dismissViewControllerAnimated:YES completion:^{
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"QRCodeReader" message:result delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+    }];
 }
 
 @end

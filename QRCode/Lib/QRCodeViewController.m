@@ -42,6 +42,12 @@
 @property (nonatomic, strong) CALayer *drawLayer;
 
 
+// 扫描完成回调block
+@property (copy, nonatomic) void (^completionBlock) (NSString *);
+
+// 音频播放
+@property (strong, nonatomic) AVAudioPlayer        *beepPlayer;
+
 @end
 
 @implementation QRCodeViewController
@@ -92,6 +98,16 @@
     return _drawLayer;
 }
 
+- (AVAudioPlayer *)beepPlayer
+{
+    if (_beepPlayer == nil) {
+        NSString * wavPath = [[NSBundle mainBundle] pathForResource:@"beep" ofType:@"wav"];
+        NSData* data = [[NSData alloc] initWithContentsOfFile:wavPath];
+        _beepPlayer = [[AVAudioPlayer alloc] initWithData:data error:nil];
+    }
+    return _beepPlayer;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -121,6 +137,15 @@
     
 }
 
+#pragma mark - Managing the Block
+
+- (void)setCompletionWithBlock:(void (^) (NSString *resultAsString))completionBlock
+{
+    self.completionBlock = completionBlock;
+}
+
+
+#pragma 扫描过程
 - (void)startScan
 {
     // 1.判断是否能够将输入添加到会话中
@@ -157,6 +182,15 @@
     [self.session startRunning];
 }
 
+- (void)stopScan
+{
+    if ([self.session isRunning]) {
+        [self.session stopRunning];
+    }
+
+    [self stopAnimation];
+}
+
 
 - (void)startAnimation
 {
@@ -177,6 +211,11 @@
     }];
 }
 
+// 停止动画
+- (void)stopAnimation
+{
+    [self.view.layer removeAllAnimations];
+}
 
 /**
  *  当从二维码中获取到信息时，就会调用下面的方法
@@ -202,15 +241,28 @@
     if (metadataObjects != nil && [metadataObjects count] > 0) {
         AVMetadataMachineReadableCodeObject *metadataObj = [metadataObjects lastObject];
         //判断回传的数据类型
-        if ([[metadataObj type] isEqualToString:AVMetadataObjectTypeQRCode]) {
+        if ([[metadataObj type] isEqualToString:AVMetadataObjectTypeQRCode] && [metadataObj isKindOfClass:[AVMetadataMachineReadableCodeObject class]]) {
             self.resultLab.text = [metadataObjects.lastObject stringValue];
             [self.resultLab sizeToFit];
+            
+            // 扫描结果
+            NSString *result = [metadataObjects.lastObject stringValue];
+            
+            // 停止扫描
+            [self stopScan];
+            
+            if (_completionBlock) {
+                [_beepPlayer play];
+                _completionBlock(result);
+            }
+            
+            if (self.delegate && [self.delegate respondsToSelector:@selector(reader:didScanResult:)]) {
+                [self.delegate reader:self didScanResult:result];
+            }
+            return;
         }
     }
 
-    
-    
-    
     
     // 2.获取扫描到的二维码的位置
     // 2.1转换坐标
