@@ -36,7 +36,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nnp-tK-sc1" userLabel="容器">
                     <rect key="frame" x="150" y="150" width="300" height="300"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrcode_border" translatesAutoresizingMaskIntoConstraints="NO" id="gJX-Ow-A6e" userLabel="边框">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrcode_border_new" translatesAutoresizingMaskIntoConstraints="NO" id="gJX-Ow-A6e" userLabel="边框">
                             <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
                         </imageView>
                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrcode_scan_line" translatesAutoresizingMaskIntoConstraints="NO" id="BeV-eC-SWh" userLabel="冲击波">
@@ -82,7 +82,6 @@
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请将二维码放在上面框中" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zkx-VD-MTH">
                     <rect key="frame" x="207" y="470" width="187" height="21"/>
-                    <color key="backgroundColor" red="0.93333333330000001" green="0.47949721249999999" blue="0.85304837489999996" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
@@ -117,7 +116,7 @@
         </view>
     </objects>
     <resources>
-        <image name="qrcode_border" width="51" height="51"/>
+        <image name="qrcode_border_new" width="258" height="258"/>
         <image name="qrcode_scan_line" width="320" height="12"/>
         <image name="qrcode_tabbar_icon_barcode" width="40" height="40"/>
         <image name="qrcode_tabbar_icon_qrcode" width="40" height="40"/>

@@ -23,7 +23,6 @@
 - (IBAction)scanCode:(UIButton *)sender {
     
     QRCodeViewController *qrVc = [[QRCodeViewController alloc] init];
-    qrVc.view.backgroundColor = [UIColor clearColor];
     qrVc.delegate = self;
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:qrVc];
     
@@ -31,7 +30,7 @@
     __weak typeof (self) wSelf = self;
     [qrVc setCompletionWithBlock:^(NSString *resultAsString) {
         [wSelf.navigationController popViewControllerAnimated:YES];
-        [[[UIAlertView alloc] initWithTitle:@"" message:resultAsString delegate:self cancelButtonTitle:@"好的" otherButtonTitles: nil] show];
+//        [[[UIAlertView alloc] initWithTitle:@"" message:resultAsString delegate:self cancelButtonTitle:@"好的" otherButtonTitles: nil] show];
     }];
     
     [self presentViewController:nav animated:YES completion:nil];
@@ -43,7 +42,7 @@
 {
     NSLog(@"%@",result);
     [self dismissViewControllerAnimated:YES completion:^{
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"QRCodeReader" message:result delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"QRCodeController" message:result delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];
     }];
 }
